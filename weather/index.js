@@ -13,8 +13,9 @@ module.exports = function(context, cb) {
 	}
 
   const getWeather = () => {
-		const loc = city === 'matt1337c' ? 'atlanta' : city === 'laurenisacat' ? 'denver' : city;
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${loc}&key=AIzaSyAlQbMhGoBHhNzWW-3hnUCBY_5vq-Kv6LY`;
+	const loc = city === 'matt1337c' ? 'atlanta' : city === 'laurenisacat' ? 'denver' : city;
+	const key = 'lol'
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${loc}&key=${key}`;
     return request.get({ url, method: 'GET', json: true })
       .then((response) => {
         if (!response) {
